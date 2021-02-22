@@ -65,7 +65,6 @@ spec:
               value: {{ index .Values "certs" "signHoursValid" }}
             - name: MF_CERTS_SIGN_RSA_BITS
               value: "{{ .Values.certs.signRSABits }}"
-              # value: {{ index .Values "certs" "signRSABits" }}
             - name: MF_CERTS_VAULT_TOKEN
               value: {{ index .Values "certs" "signVaultToken" }}
             - name: MF_CERTS_VAULT_HOST
