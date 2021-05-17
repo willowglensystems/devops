@@ -25,6 +25,24 @@ spec:
               value: {{ default .Values.defaults.logLevel .Values.adapter_lora.logLevel }}
             - name: MF_NATS_URL
               value: nats://{{ .Release.Name }}-nats-client:{{ .Values.defaults.natsPort }}
+            - name: MF_RABBITMQ_URL
+              value: amqp://guest:guest@rabbitmq:{{ .Values.defaults.rabbitmqPort }}
+            - name: MF_RABBITMQ_TLS_CONFIG
+              value: {{ .Values.rabbitmq.tlsConfig }}
+            - name: MF_RABBITMQ_DURABLE
+              value: {{ .Values.rabbitmq.durable }}
+            - name: MF_RABBITMQ_TTL
+              value: {{ .Values.rabbitmq.ttl }}
+            - name: MF_RABBITMQ_PRIORITY
+              value: {{ .Values.rabbitmq.priority }}
+            - name: MF_RABBITMQ_CONTENT_TYPE
+              value: {{ .Values.rabbitmq.contentType }}
+            - name: MF_RABBITMQ_SUB_SYSTEM
+              value: {{ .Values.rabbitmq.subSystem }}
+            - name: MF_RABBITMQ_SEVERITY
+              value: {{ .Values.rabbitmq.severity }}
+            - name: MF_RABBITMQ_QUEUE
+              value: {{ .Values.rabbitmq.queue }}
             - name: MF_LORA_ADAPTER_MESSAGES_URL
               value: {{ .Values.adapter_lora.messageUrl }}
             - name: MF_LORA_ADAPTER_ROUTE_MAP_URL
