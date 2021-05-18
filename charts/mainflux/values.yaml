@@ -17,15 +17,16 @@ queueSystem:
   natsQueue: true
   rabbitmqQueue: false
 
-rabbitmq:
-  tlsConfig: ""
-  durable: true
-  ttl: 345600
-  priority: 5
-  contentType: "application/json"
-  subSystem: "smc"
-  severity: 6
-  queue: "topic1:replyTo1,topic2:replyTo2"
+# Uncomment this block for RabbitMQ optional parameters
+# rabbitmq:
+#   tlsConfig: ""
+#   durable: true
+#   ttl: 345600
+#   priority: 5
+#   contentType: "application/json"
+#   subSystem: "smc"
+#   severity: 6
+#   queue: "topic1:replyTo1,topic2:replyTo2"
 
 ingress:
   enabled: true
