@@ -21,6 +21,11 @@ dependencies:
   - name: nats
     version: "4.3.7"
     repository: "@stable"
+    condition: queueSystem.natsQueue
+  - name: rabbitmq
+    version: "8.0.0"
+    repository: "@bitnami"
+    condition: queueSystem.rabbitmqQueue
   - name: postgresql
     version: "10.2.3"
     repository: "@bitnami"
